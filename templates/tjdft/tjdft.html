@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+	  
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-1T6SD27Z88"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-1T6SD27Z88');
+	</script>
+	  
+    <title> FERIAS </title>
+
+    <link rel="stylesheet" href="StyleContador.css">
+
+  </head>
+  <body>
+      
+
+    <section class="StyleContador">
+
+      <div style="text-align:center">
+        <h1 style="color:red;">MINISTERIO DAS COMUNICAÇÕES </h1>
+      </div>
+
+
+
+      <div class="counter-up">
+        <div class="content">
+
+            <div class="timer">
+              <p id="day"></p>
+              <h6>days</h6>
+            </div>
+        
+            <div class="timer">
+              <p id="hour"></p>
+              <h6>hours</h6>
+            </div>
+        
+            <div class="timer">
+              <p id="minute"></p>
+              <h6>minutes</h6>
+            </div>
+
+            <div class="timer">
+              <p id="second"></p>
+              <h6>seconds</h6>
+            </div>
+
+
+        </div>
+      </div>
+    </section>
+
+
+  
+
+
+
+    <!-- Contador -->
+    <script>
+      $(document).ready(function(){
+          $(".counter").counterUp({
+            delay: 10,
+            time: 1200
+          });
+        });
+    </script>
+
+    <!-- Card Slide -->
+    <script>
+      $(".slider").owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000, //2000ms = 2s;
+        autoplayHoverPause: true,
+      });
+    </script>
+    
+    <!-- Regressivo -->
+    <script>
+    
+    var countDownDate = new Date("Mai 29, 2022 00:00:00").getTime();
+    var x = setInterval(function() {
+
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    document.getElementById("day").innerHTML = days;
+    document.getElementById("hour").innerHTML = hours;
+    document.getElementById("minute").innerHTML = minutes;
+    document.getElementById("second").innerHTML = seconds;
+    });
+
+   </script>
+   
+
+  </body>
+</html>
